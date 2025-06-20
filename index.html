@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Cyber report</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- CSS Reset / Normalize -->
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+
+        <nav class="header-nav">
+          <a href="about.html">about</a>
+        </nav>
+      </div>      
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="content">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="index.html">cyber report tool</a></li>
+      </ul>
+
+      <!-- Step 1 -->
+      <div class="step step-1">
+        <div class="card fade-up">
+          <div class="card-header">
+            <h3>Enter URL To Scan</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <div class="card-input">
+                <img src="img/globe.svg" alt="">
+                <input type="text" name="" value="https://www.seirim.com">
+              </div>
+              <button class="card-btn">
+                Scan <img src="img/scan.svg" alt=""> 
+              </button>
+            </div>          
+          </div>
+        </div>
+        <div class="hor-line"></div>
+        <p class="desc">Cyber Report is a cybersecurity threat intelligence tool that utilizes a large array of network scans, database checks, open source tools, Al-assistance and more to provide a quick yet comprehensive analysis of a domain's current security posture and risks.</p>      
+        <p class="desc">Brought to you by the <a class="text-primary" href="#">SEIRIM cybersecurity</a> team</p>   
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step step-2" style="display: none;">
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="tab1">General</button>
+            <button class="tab-btn" data-tab="tab2">Geo</button>
+            <button class="tab-btn" data-tab="tab3">ports</button>
+            <button class="tab-btn" data-tab="tab4">chatGPT</button>
+            <button class="tab-btn" data-tab="tab5">Threat Indicators</button>
+            <button class="tab-btn" data-tab="tab6">vulnerability info</button>
+          </div>
+          <div class="tab-content">
+            <!-- General -->
+            <div class="tab-pane general show fade-in" id="tab1">
+              <div class="card fade-up">
+                <div class="card-header">
+                  <h3>General Result</h3>
+                </div>
+                <div class="card-body">
+                  <!-- <div class="table-responsive"> -->
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Hosts:</td>
+                          <td>https://www.seirim.com</td>
+                        </tr>
+                        <tr>
+                          <td>IP:</td>
+                          <td>170.249.213.108</td>
+                        </tr>
+                        <tr>
+                          <td>OS:</td>
+                          <td>Linux 4.4</td>
+                        </tr>
+                        <tr>
+                          <td>Web Server:</td>
+                          <td>Linux 4.4</td>
+                        </tr>
+                        <tr>  
+                          <td>OS Guess:</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>  
+                          <td>CMS:</td>
+                          <td>N/A</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  <!-- </div> -->
+                </div>
+              </div> 
+            </div>
+
+            <!-- Geo -->
+            <div class="tab-pane geo" id="tab2">
+              <div class="card fade-up">
+                <div class="card-header">
+                  <h3>Geolocation Info</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>City</th>
+                          <th>Region</th>
+                          <th>Country</th>
+                          <th>Timezone</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Atlanta</td>
+                          <td>Georgia</td>
+                          <td>United States</td>
+                          <td>America / New York</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+            <!-- Ports -->
+            <div class="tab-pane geo" id="tab3">
+              <div class="card fade-up">
+                <div class="card-header">
+                  <h3>Open Ports</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Port</th>
+                          <th>Service</th>
+                          <th>State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>80/tcp</td>
+                          <td>http</td>
+                          <td>Open</td>
+                        </tr>
+                        <tr>
+                          <td>443/tcp</td>
+                          <td>https</td>
+                          <td>Open</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+            <!-- ChatGPT -->
+            <div class="tab-pane geo chatgpt" id="tab4">
+
+              <h2 class="card-title">AI Analysis Report</h2>
+
+              <!-- Company -->
+              <div class="card fade-up">
+                <div class="card-header">
+                  <h3>Company Information</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Company Name</div>
+                              SEIRIM
+                            </div>                          
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Primary Industry</div>
+                              Information Technology & Services
+                            </div>
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Related Industries</div>
+                              IT Services, Software Development, Web Development
+                            </div>
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Company Size</div>
+                              Small (1-10)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Revenue</div>
+                              <$1M
+                            </div>                          
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Headquarters</div>
+                              Unknown
+                            </div>
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Operating Regions</div>
+                              Global
+                            </div>
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Company Status</div>
+                              Private
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+
+              <!-- Business -->
+              <div class="card business fade-up">
+                <div class="card-header">
+                  <h3>Business Profile</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">Products & Services</div>
+                              Web Development, Software Development, IT Consulting
+                            </div>                          
+                          </td>
+                          <td>
+                            <div class="td-wrap">
+                              <div class="sup">business</div>
+                              Businesses of all sizes
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+
+              <!-- Threat -->
+              <div class="card threat fade-up">
+                <div class="card-header">
+                  <h3>Threat Intelligence</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="business">
+                      <tbody>
+                        <tr>
+                          <td>
+                            No recent threats found                       
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+
+              <!-- Risk -->
+              <div class="card risk fade-up">
+                <div class="card-header">
+                  <h3>Risk Assessment</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Industry Risks</th>
+                          <th>Size Risks</th>
+                          <th>Location Risks</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="td-wrap">
+                              <ul>
+                                <li>Data breaches</li>
+                                <li>Malware attacks</li>
+                                <li>Insider threats</li>
+                              </ul>
+                            </div>                          
+                          </td>  
+                          <td>
+                            <div class="td-wrap">
+                              <ul>
+                                <li>Limited resources for IT security</li>
+                                <li>Lack of dedicated security personnel</li>
+                              </ul>
+                            </div>
+                          </td>    
+                          <td>
+                            <div class="td-wrap">
+                              Global operations may increase exposure to various regional cyber threats
+                            </div>
+                          </td>                    
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+
+              <!-- Security -->
+              <div class="card security fade-up">
+                <div class="card-header">
+                  <h3>Security Hygiene</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>SSL/TLS</th>
+                          <th>Email Security</th>
+                          <th>HTTP Headers</th>
+                          <th>Blacklist Status</th>
+                          <th>Security Score</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Unknown</td>
+                          <td>Unknown</td>
+                          <td>Unknown</td>
+                          <td>Unknown</td>
+                          <td><div class="security-score"></div>5/10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="justification">
+                    <p>Justification</p>
+                    <p>Assuming average security practices based on industry and size</p>
+                  </div>                  
+                </div>
+              </div> 
+            </div>
+
+            <!-- Threat -->
+            <div class="tab-pane geo threat-indicators" id="tab5">
+              <h2 class="card-title">Threat Indicators Analysis</h2>
+
+              <div class="card risk fade-up">
+                <div class="card-header">
+                  <h3>Overall Risk Assessment</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Security Recommendations</th>
+                          <th>Risk Level</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="td-wrap">
+                              <ul>
+                                <li>Close unnecessary open ports.</li>
+                                <li>Implement geo-blocking or filtering.</li>
+                                <li>Monitor network traffic for suspicious activity.</li>
+                              </ul>
+                            </div>                          
+                          </td>     
+                          <td>
+                            <div class="risk-level">MEDIUM</div>
+                            <p>Global operations may increase exposure to various regional cyber threats</p>
+                          </td>                    
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vulnerability -->
+            <div class="tab-pane geo vulnerability" id="tab6">
+              <h2 class="card-title">Vulnerability Information Analysis</h2>
+              <div class="card fade-up">
+                <div class="card-header">
+                  <h3>Detection Details</h3>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li><span>5</span>Malicious Files</li>
+                    <li class="yellow"><span>6</span>Suspicious Files</li>
+                    <li class="yellow"><span>3</span>Potential Suspicious Files</li>
+                    <li class="green"><span>6</span>Clean Files</li>
+
+                    <li class="gray"><span>3</span>External Links Detected</li>
+                    <li class="gray"><span>1</span>Iframes Scanned</li>
+                    <li class="gray"><span>0</span>Referenced Domains</li>
+                    <li><span>0</span>Blacklisted Links Detected</li>
+
+                    <li><span>0</span>Blacklisted Iframes</li>
+                    <li><span>0</span> Referenced Blacklisted Domains</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>Copyright 2023 Business Documentaries Ltd. |  <a href="#">Privacy Policy</a>  |  <a href="#">Terms & Conditions</a>  |  <a href="#">Sitemap</a> </p>
+      </div>      
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

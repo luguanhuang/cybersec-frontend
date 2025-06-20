@@ -1,0 +1,628 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+	flex: 1;
+}
+
+body {
+	color: #fff;
+  font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	background-color: #06080F;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input:focus,
+button:focus {
+	outline: none;
+}
+
+
+/*Animation*/
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Keyframes for the fade-up animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* General */
+.container {
+	max-width: 1440px;
+	width: 100%;
+	padding: 0 5%;
+	margin: 0 auto;
+}
+
+.text-primary {
+	color: #0782F4;
+}
+
+/*Header*/
+.header {
+	/*position: sticky;
+	top: 0;
+	height: 70px;
+	z-index: 1;
+	background-color: #06080F;*/
+}
+
+.header-inner {
+	border-bottom: 1px solid #191F36;
+	padding: 20px 0;
+	display: flex;
+}
+
+.header-nav {
+	margin-left: auto;
+}
+
+.header-nav a {
+	color: #FFF;
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 1.95px;
+	text-transform: uppercase;
+}
+
+/*Footer*/
+.footer {
+	margin-top: 4rem;
+}
+
+.footer-inner {
+	border-top: 1px solid #2A2F36;
+	padding: 20px 0;
+}
+
+.footer-inner p a,
+.footer-inner p {
+	color: #2A2F36;
+}
+
+.footer-inner p {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 1.44px;
+	text-transform: uppercase;
+}
+
+.footer-inner p a:hover {
+	color: #5d6877;
+}
+
+/*Content*/
+.breadcrumbs {
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+	padding-top: 15px;
+}
+
+.breadcrumbs li {
+	text-align: right;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 25px; /* 208.333% */
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+
+.breadcrumbs li a {
+		color: #FFF;
+}
+
+.breadcrumbs li:before {
+	content: '';
+	width: 8px;
+	height: 1px;
+	background-color: #fff;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+.breadcrumbs-active {
+	color: #0782F4;
+}
+
+.breadcrumbs li.breadcrumbs-active:before {
+	background-color: #0782F4;
+}
+
+.step {
+	margin: 0 auto;
+}
+
+.card {
+	background: #0B1124;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.card-header,
+.card-body {
+	padding-left: 49px;
+	padding-right: 49px;
+}
+
+.card-header {
+	border-bottom: 1px solid #131C39;
+}
+
+.card-header h3,
+.card-title {
+	font-weight: 500;
+}
+
+.form-group {
+	display: flex;
+	align-items: flex-start;
+	gap: 11px;
+}
+
+.card-input {
+	position: relative;
+	width: 100%;
+	flex: 1;
+}
+
+.card-input img {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 18px;
+}
+
+.card-input input {
+	color: #fff;
+	border: 1px solid #1365B0;
+	background: #0B1124;
+	width: 100%;
+	height: 55px;
+	padding: 16px 18px 16px 50px;
+}
+
+.card-btn {
+	color: #fff;
+	border: 1px solid #2C3B71;
+	background: rgba(6, 8, 15, 0.50);
+	width: 114px;
+	height: 55px;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 11px;
+	cursor: pointer;
+}
+
+
+/*Tabs*/
+.tabs {
+  margin: 56px auto 0;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 65px;
+}
+
+.tab-btn {
+	border: 1px solid #0C487F;
+	padding: 10px 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 25px; /* 166.667% */
+	text-transform: capitalize;
+	background-color: transparent;
+	cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab-btn:hover {
+  /*background: #ddd;*/
+}
+
+.tab-btn.active {
+	background: linear-gradient(90deg, #07D8F4 -12.5%, #0969EF 112.5%);
+  border: none;
+}
+
+.tab-content {
+  min-height: 100px;
+}
+
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 0 auto;
+}
+
+.tab-pane.show {
+  display: block;
+}
+
+.tab-pane.fade-in {
+  opacity: 1;
+}
+
+
+.hor-line {
+	width: 105px;
+	height: 4px;
+	background: linear-gradient(95deg, #057BA0 -4.15%, #042DC0 102.16%);
+	margin: 129px auto 24px;
+}
+
+.desc {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px; /* 157.143% */
+	letter-spacing: 0.7px;
+	max-width: 612px;
+	margin: 0 auto;
+}
+
+/* Step 1 */
+.step-1 {
+	max-width: 612px;
+	margin-top: 80px;
+}
+
+.step-1 .card-header {
+	padding-top: 22px;
+	padding-bottom: 21px;
+}
+
+.step-1 .card-header h3 {
+	font-size: 24px;
+	line-height: 35px; /* 145.833% */
+}
+
+.step-1 .card-body {
+	padding-top: 26px;
+	padding-bottom: 37px;
+}
+
+.step-1 .desc {
+	margin-bottom: 35px;
+}
+
+/*Step 2*/
+.step-2 .card-header h3,
+.step-2 .card-title {
+	font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.step-2 table {
+	table-layout: fixed;
+}
+
+/*General*/
+.general {
+	max-width: 388px;
+}
+
+.general .card-header {
+	padding-top: 29px;
+	padding-bottom: 25px;
+}
+
+.general .card-body {
+	padding-top: 26px;
+	padding-bottom: 42px;
+}
+
+.general th,
+.general td {
+	font-size: 14px;
+	line-height: 22px; /* 157.143% */
+	letter-spacing: 0.7px;
+}
+
+.general td:first-child {
+	font-weight: 500;
+}
+
+.general td {
+	font-weight: 300;
+	padding: 5px;
+}
+
+.general td:last-child {
+	text-align: right;
+}
+
+/*Geo*/
+.geo {
+	max-width: 1024px;
+}
+
+.geo .card-header {
+	padding-top: 29px;
+	padding-bottom: 25px;
+}
+
+.geo .card-body {
+	padding: 0 0 20px;
+}
+
+.geo th,
+.geo td {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px; /* 137.5% */
+	letter-spacing: 0.8px;
+	padding: 17px 0 15px;
+}
+
+.geo th:first-child,
+.geo td:first-child {
+	padding-left: 49px;
+}
+
+.geo th:last-child,
+.geo td:last-child {
+	padding-right: 49px;
+}
+
+.geo th {
+	color: #B0B0B0;
+}
+
+.geo td {
+	border-top: 1px solid #131C39;
+}
+
+/*Ports*/
+
+/*ChatGPT*/
+.chatgpt h2,
+.threat-indicators h2,
+.vulnerability h2 {
+	margin: 71px 0 19px;
+}
+
+.chatgpt .card {
+	margin-bottom: 19px;
+}
+
+.chatgpt .card-body {
+	padding-top: 15px;
+}
+
+.sup {
+	color: #B0B0B0;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.6px;
+	margin-bottom: 5px;
+}
+
+.td-wrap {
+	max-width: 178px;
+}
+
+.chatgpt td {
+	border: none;
+}
+
+.business .td-wrap {
+	max-width: 414px;
+}
+
+.threat td {
+	color: #6B6B6B;
+}
+
+.risk th {
+	color: #fff;
+	padding-bottom: 0;
+}
+
+.risk .td-wrap {
+	max-width: 257px;
+}
+
+.risk li {
+	padding: 15px 0;
+}
+
+.risk li:first-child {
+	padding-top: 0;
+}
+
+.risk li:not(:last-child) {
+	border-bottom: 1px solid #131C39;
+}
+
+.security .card-body {
+	padding-top: 0;
+}
+
+.security td {
+	border-top: 1px solid #131C39;
+}	
+
+.justification {
+	padding: 35px 49px 21px;
+}
+
+.justification p {
+	margin-bottom: 8px;
+}
+
+/*Threat Indicators*/
+.threat-indicators .card-body {
+	padding-top: 20px;
+}
+
+.threat-indicators td {
+	border: none;
+}
+
+.risk-level {
+	display: inline-block;
+	background-color: #FFB700;
+	padding: 5px;
+	color: #544B35;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.threat-indicators .td-wrap {
+	max-width: 400px;
+}
+
+/*Vulnerability*/
+.vulnerability .card-body {
+	padding: 39px 49px 58px;
+}
+
+.vulnerability ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 31px 25px;
+}
+
+.vulnerability li {
+	width: 208px;
+	height: 53px;
+	background: #3E2525;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.7px;
+	padding: 12px 9px 12px 28px;
+	position: relative;
+	line-height: 1.2;
+}
+
+.vulnerability li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 8px;
+	height: 100%;
+	background: #ED0905;
+}
+
+.vulnerability li.yellow {
+	background: #544B35;
+}
+
+.vulnerability li.yellow:before {
+	background: #FFB700;
+}
+
+.vulnerability li.green {
+	background: #142F19;
+}
+
+.vulnerability li.green:before {
+	background: #08C22A;
+}
+
+.vulnerability li span {
+	font-size: 25px;
+	letter-spacing: 1.25px;
+	margin-right: 14px;
+}
+
+/*Table responsive*/
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* for smooth scroll on iOS */
+}
+
+.table-responsive table {
+  width: 100%;
+  min-width: 600px; /* optional: set a min-width so it doesn't shrink too much */
+  border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+	padding-right: 10px;
+  /*padding: 8px 12px;*/
+  /*white-space: nowrap; */
+  /* prevents content from breaking into new lines */
+}
+
+
+/*About*/
+.about h1 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 35px; /* 116.667% */
+	margin: 63px 0 22px;
+}
+
+.about .hor-line {
+	margin: 0 auto 31px;
+}
+
+.about p:not(:last-child) {
+	margin-bottom: 62px;
+}
+
+@media (max-width: 575px) {
+	.card-header,
+	.card-body,
+	.vulnerability .card-body {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
