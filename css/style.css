@@ -698,3 +698,27 @@ th, td {
   50% { top: 100%; }
   100% { top: 0; }
 }
+
+.about-link {
+	position: relative;
+}
+
+.about-link:before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #3196F6;
+	transition: 0.3s;
+	display: block;
+}
+
+.about-link:hover {
+	color: #3196F6;
+}
+
+.about-link:hover:before {
+	width: 100%;
+}
